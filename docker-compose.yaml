@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  rtsp-stream:
+    image: rtsp-stream
+    ports:
+      - "85:8080"
