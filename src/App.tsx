@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import VideoPlayer from "./components/VideoPlayer.jsx"
-import './App.css'
+// import VideoPlayer from "./components/VideoPlayer.jsx"
+// import StreamPlayer from "./components/StreamPlayer.jsx"
+import HlsPlayer from "./components/HlsPlayer.jsx"
+// import './App.css'
 
 function App() {
   const [url, setUrl] = useState("")
@@ -12,11 +14,12 @@ function App() {
       type="text"
       value={url}
       onChange = {(e) => setUrl(e.target.value)}
-      placeholder="Enter webRTC URL"
+      placeholder="Enter HLS URL"
       />
-      <VideoPlayer url={url} />
+      <HlsPlayer url={url} />
     </div>
   )
 }
 
 export default App
+// http://localhost:85/stream/camera1/index.m3u8
